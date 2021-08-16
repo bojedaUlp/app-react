@@ -6,7 +6,7 @@ import {IconContext} from 'react-icons'
 
 test("Weather render",async () =>{
     ///AAA ARRANGE ACT ASSERT
-    const {findByRole}= render(<Weather temperature={10} state="sunny"/>)
+    const {findByRole}= render(<Weather temperature={10} state="clear"/>)
 
     const temp= await findByRole("heading")
 

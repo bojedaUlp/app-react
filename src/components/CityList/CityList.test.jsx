@@ -4,14 +4,14 @@ import CityList from './CityList'
 import {IconContext} from 'react-icons'
 
 const cities = [
-    {city:"Buenos Aires", country:"Argentina"},
-    {city:"Bogota" , country:"Colombia"},
-    {city:"Madrid", country:"ESPAÑA"},
-    {city:"New York", country:"EE.UU"}
+    { city: "Buenos Aires", country: "Argentina" ,countryCode:"AR"},
+    { city: "Bogota", country: "Colombia" , countryCode:"CO"},
+    { city: "Madrid", country: "ESPAÑA" , countryCode:"ES"},
+    { city: "Ciudad de Mexico", country: "Mexico" , countryCode:"MX"}
 ]
 test("CityList renders", async () => {
 
-        const {findAllByRole}=render(<CityList cities={cities}/>)
+        const {findAllByRole}=render(<CityList cities={cities} onClickCity={()=>{}}/>)
 
         const items = await findAllByRole("button")
 
